@@ -41,5 +41,8 @@ func _on_file_1_pressed() -> void:
 
 
 func _on_cardio_button_pressed() -> void:
-	
+	$GravityAtrophy.text = "Wellness Check – Parvo Trand
+Day 165 of Voyage
+
+Patient entered medbay seeking aid with apparent muscle degradation. Patient felt fatigued and weak. Patient comment upon intake was “I feel like everything is pushing in around me.” Upon regular medical examination, patient does seem to be experiencing acute muscle atrophy. Prescribed patient with 45 minutes of EMBRACE a cycle. Will continue to monitor and follow up if the need arises."
 	$GravityAtrophy/CardioButton.visible = false
