@@ -51,7 +51,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_ojupu")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2u1pf")
 
 [node name="StaticText" type="RichTextLabel" parent="." unique_id=1024017350]
-visible = false
 layout_mode = 0
 offset_left = 233.0
 offset_top = 182.0
@@ -90,7 +89,6 @@ position = Vector2(721, 361)
 texture = ExtResource("5_ojupu")
 
 [node name="Puzzle" type="VBoxContainer" parent="." unique_id=469742997]
-visible = false
 layout_mode = 0
 offset_left = 552.0
 offset_top = 224.0

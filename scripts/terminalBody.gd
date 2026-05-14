@@ -31,7 +31,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
-	if new_text == "cambre":
+	if new_text == "crambe":
 		$StaticText.visible = false
 		$Puzzle.visible = true
 	if new_text == "EMBRACE THE WHOLE":

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://vwxg5opg13n8"]
+
+[ext_resource type="Texture2D" uid="uid://cuih1884ntvbo" path="res://icon.svg" id="1_b4lbs"]
+
+[node name="Node2D" type="Control" unique_id=1776421246]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1440.0
+offset_bottom = 720.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=322180691]
+position = Vector2(720.49994, 360)
+scale = Vector2(11.257812, 5.625)
+texture = ExtResource("1_b4lbs")
+
+[node name="Button" type="Button" parent="." unique_id=698811209]
+visible = false
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 720.0
