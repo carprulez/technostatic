@@ -140,8 +140,67 @@ offset_bottom = 315.0
 theme = ExtResource("5_2u1pf")
 text = "cardio"
 
+[node name="ClimConFever" type="RichTextLabel" parent="." unique_id=1935062989]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 180.0
+offset_right = 1211.0
+offset_bottom = 539.0
+theme = ExtResource("4_4vtf0")
+text = "Wellness Check - Dawn Varren
+Day 322 of Voyage
+
+Patient entered medbay looking pale and heavily perspirating. Patient reported symptoms similar to the common influenza virus that was eradicated decades ago. Patient commented that “the air smelled different from normal.” Alerting maintenance that a climate control issue has occurred in the habitation pods. Prescribed patient an anitbiotic and 3 days of self-quarantine. Set up meals for patient to receive correct nutrients to dissuade any bacteria from spreading in the body.
+"
+
+[node name="AnButton" type="Button" parent="ClimConFever" unique_id=1001032256]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 280.0
+offset_right = 318.0
+offset_bottom = 315.0
+theme = ExtResource("5_2u1pf")
+text = "an"
+
+[node name="CarbMonoPoison" type="RichTextLabel" parent="." unique_id=1274896487]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 180.0
+offset_right = 1211.0
+offset_bottom = 539.0
+theme = ExtResource("4_4vtf0")
+text = "Wellness Check - Landon Whitlock
+Day 502 of Voyage
+
+Patient was rushed into medbay by medical personnel. Patient was reported to have been hallucinating. Bystanders and medical personnel heard patient mumbling about “the Long Burrower in the rock.” Final diagnosis was decided to be carbon monoxide poisoning. Maintenance has been alerted to the issue. We are hoping that the climate control issues that have been arising do not effect anymore of the colonists.
+"
+
+[node name="ColonistsButton" type="Button" parent="CarbMonoPoison" unique_id=500472125]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 315.0
+offset_right = 525.0
+offset_bottom = 350.0
+theme = ExtResource("5_2u1pf")
+text = "colonists"
+
+[node name="ReturnButton" type="Button" parent="." unique_id=843168929]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 569.0
+offset_right = 788.0
+offset_bottom = 592.0
+theme = ExtResource("5_2u1pf")
+text = "RETURN"
+
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="OnSwitch" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="StaticText/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Puzzle/File1" to="." method="_on_file_1_pressed"]
+[connection signal="pressed" from="Puzzle/File2" to="." method="_on_file_2_pressed"]
+[connection signal="pressed" from="Puzzle/File3" to="." method="_on_file_3_pressed"]
+[connection signal="pressed" from="Puzzle/File4" to="." method="_on_file_4_pressed"]
 [connection signal="pressed" from="GravityAtrophy/CardioButton" to="." method="_on_cardio_button_pressed"]
+[connection signal="pressed" from="ClimConFever/AnButton" to="." method="_on_an_button_pressed"]
+[connection signal="pressed" from="CarbMonoPoison/ColonistsButton" to="." method="_on_colonists_button_pressed"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
