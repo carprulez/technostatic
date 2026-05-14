@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b1yfpxsfrpbwe"]
+
+[ext_resource type="Texture2D" uid="uid://b7fc7i42eq4vr" path="res://assets/ui/technostaticIntro.png" id="1_ioskq"]
+[ext_resource type="Script" uid="uid://cofe8yfph5kei" path="res://scripts/intro.gd" id="1_yjqpq"]
+
+[node name="Control" type="Control" unique_id=789630936]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yjqpq")
+
+[node name="Button" type="Button" parent="." unique_id=592101152]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 720.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1740241848]
+position = Vector2(720, 360)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("1_ioskq")
+
+[connection signal="pressed" from="Button" to="." method="_on_screen_pressed"]

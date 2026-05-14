@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cc4kdddkqvilb"]
+
+[ext_resource type="Script" uid="uid://71me0naqvuaj" path="res://scripts/terminalBody.gd" id="1_sy66w"]
+[ext_resource type="Texture2D" uid="uid://c03ebubik4ose" path="res://assets/ui/TerminalUI.png" id="2_vs6ym"]
+[ext_resource type="Theme" uid="uid://ddghnc760x4xr" path="res://themes/LineEdit.tres" id="3_vs6ym"]
+[ext_resource type="Theme" uid="uid://du0m6gsybr0jp" path="res://themes/RichTextLabel.tres" id="4_4vtf0"]
+[ext_resource type="Theme" uid="uid://cnbu2cekoxuqo" path="res://themes/Button.tres" id="5_2u1pf"]
+[ext_resource type="Texture2D" uid="uid://c7nu5gv7exg6y" path="res://assets/ui/terminalOverlay1.png" id="5_ojupu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhnb1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6hjw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4vtf0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ojupu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2u1pf"]
+
+[sub_resource type="Theme" id="Theme_ojupu"]
+VBoxContainer/constants/separation = 40
+
+[node name="Control" type="Control" unique_id=222700412]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sy66w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1865765304]
+position = Vector2(720.5, 360.5)
+scale = Vector2(1.0006944, 1.0013889)
+texture = ExtResource("2_vs6ym")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1352974636]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 607.0
+offset_right = 929.0
+offset_bottom = 658.0
+theme = ExtResource("3_vs6ym")
+
+[node name="OnSwitch" type="Button" parent="." unique_id=1031368033]
+layout_mode = 0
+offset_left = 1261.0
+offset_top = 501.0
+offset_right = 1293.0
+offset_bottom = 590.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dhnb1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g6hjw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4vtf0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ojupu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2u1pf")
+
+[node name="StaticText" type="RichTextLabel" parent="." unique_id=1024017350]
+visible = false
+layout_mode = 0
+offset_left = 233.0
+offset_top = 182.0
+offset_right = 1210.0
+offset_bottom = 557.0
+theme = ExtResource("4_4vtf0")
+text = "Hello USER, welcome to the Luximos colony ship. WE are en route to the Prima Loci system. OUR estimated time to planetfall on Loci II is 01100101 01101101 01100010 01110010 01100001 01100011 01100101 00100000 01110101 01110011 seconds.
+
+
+
+
+
+USER LOGIN REQUIRED"
+
+[node name="TextureButton" type="Button" parent="StaticText" unique_id=1700639919]
+z_index = 2
+layout_mode = 0
+offset_left = 266.0
+offset_top = 106.0
+offset_right = 394.0
+offset_bottom = 141.0
+theme = ExtResource("5_2u1pf")
+
+[node name="FlavorText" type="RichTextLabel" parent="." unique_id=1566005480]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 583.0
+offset_right = 1252.0
+offset_bottom = 659.0
+theme = ExtResource("4_4vtf0")
+text = "Sys: ASLEEP
+Biotags: 1"
+
+[node name="TerminalOverlay" type="Sprite2D" parent="." unique_id=1877156322]
+position = Vector2(721, 361)
+texture = ExtResource("5_ojupu")
+
+[node name="Puzzle" type="VBoxContainer" parent="." unique_id=469742997]
+visible = false
+layout_mode = 0
+offset_left = 552.0
+offset_top = 224.0
+offset_right = 879.0
+offset_bottom = 497.0
+theme = SubResource("Theme_ojupu")
+
+[node name="File1" type="Button" parent="Puzzle" unique_id=612601541]
+layout_mode = 2
+theme = ExtResource("5_2u1pf")
+text = "File 1 - Gravity Atrophy"
+
+[node name="File2" type="Button" parent="Puzzle" unique_id=38239145]
+layout_mode = 2
+theme = ExtResource("5_2u1pf")
+text = "File 2 - Climate Control Fever"
+
+[node name="File3" type="Button" parent="Puzzle" unique_id=195454762]
+layout_mode = 2
+theme = ExtResource("5_2u1pf")
+text = "File 3 - Carbon Monoxide Poisoning"
+
+[node name="File4" type="Button" parent="Puzzle" unique_id=165817044]
+layout_mode = 2
+theme = ExtResource("5_2u1pf")
+text = "TOTAL ASSIMILATION"
+
+[node name="GravityAtrophy" type="RichTextLabel" parent="." unique_id=1568509974]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 180.0
+offset_right = 1211.0
+offset_bottom = 539.0
+theme = ExtResource("4_4vtf0")
+text = "Wellness Check – Parvo Trand
+Day 165 of Voyage
+
+Patient entered medbay seeking aid with apparent muscle degradation. Patient felt fatigued and weak. Patient comment upon intake was “I feel like everything is pushing in around me.” Upon regular medical examination, patient does seem to be experiencing acute muscle atrophy. Prescribed patient with 45 minutes of cardio a cycle. Will continue to monitor and follow up if the need arises.
+"
+
+[node name="CardioButton" type="Button" parent="GravityAtrophy" unique_id=1230715106]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 280.0
+offset_right = 267.0
+offset_bottom = 315.0
+theme = ExtResource("5_2u1pf")
+text = "cardio"
+
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="OnSwitch" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="StaticText/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Puzzle/File1" to="." method="_on_file_1_pressed"]
+[connection signal="pressed" from="GravityAtrophy/CardioButton" to="." method="_on_cardio_button_pressed"]

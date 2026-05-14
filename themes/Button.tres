@@ -1,0 +1,21 @@
+[gd_resource type="Theme" format=3 uid="uid://cnbu2cekoxuqo"]
+
+[sub_resource type="SystemFont" id="SystemFont_hvkdi"]
+font_names = PackedStringArray("Natural Mono")
+disable_embedded_bitmaps = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvkdi"]
+bg_color = Color(0.12156863, 0.7254902, 0.4117647, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rsedc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0g67h"]
+bg_color = Color(0.24705882, 0.17254902, 0.37254903, 1)
+
+[resource]
+Button/colors/font_color = Color(0.12156863, 0.7254902, 0.4117647, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/fonts/font = SubResource("SystemFont_hvkdi")
+Button/styles/hover = SubResource("StyleBoxFlat_hvkdi")
+Button/styles/normal = SubResource("StyleBoxEmpty_rsedc")
+Button/styles/pressed = SubResource("StyleBoxFlat_0g67h")
