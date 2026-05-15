@@ -69,7 +69,7 @@ Day 322 of Voyage
 
 Patient entered medbay looking pale and heavily perspirating. Patient reported symptoms similar to the common influenza virus that was eradicated decades ago. Patient commented that “the air smelled different from normal.” Alerting maintenance that a climate control issue has occurred in the habitation pods. Prescribed patient THE anitbiotic and 3 days of self-quarantine. Set up meals for patient to receive correct nutrients to dissuade any bacteria from spreading in the body.
 "
-	$GravityAtrophy/CardioButton.visible = false
+	$ClimConFever/AnButton.visible = false
 
 
 func _on_file_3_pressed() -> void:
@@ -94,6 +94,7 @@ func _on_return_button_pressed() -> void:
 	$CarbMonoPoison.visible = false
 	$Puzzle.visible = true
 	
+
 
 func _on_file_4_pressed() -> void:
 	$Puzzle.visible = false

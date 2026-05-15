@@ -140,10 +140,10 @@ text = "cardio"
 
 [node name="ClimConFever" type="RichTextLabel" parent="." unique_id=1935062989]
 layout_mode = 0
-offset_left = 233.0
-offset_top = 180.0
-offset_right = 1211.0
-offset_bottom = 539.0
+offset_left = 232.0
+offset_top = 184.0
+offset_right = 1210.0
+offset_bottom = 571.0
 theme = ExtResource("4_4vtf0")
 text = "Wellness Check - Dawn Varren
 Day 322 of Voyage
