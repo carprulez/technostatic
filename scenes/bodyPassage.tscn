@@ -2,7 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://cuih1884ntvbo" path="res://icon.svg" id="1_b4lbs"]
 
-[node name="Node2D" type="Control" unique_id=1776421246]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4lbs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekd0a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ikbf6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_34ap4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ovcpp"]
+
+[node name="Control" type="Control" unique_id=1776421246]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1440.0
@@ -14,7 +24,11 @@ scale = Vector2(11.257812, 5.625)
 texture = ExtResource("1_b4lbs")
 
 [node name="Button" type="Button" parent="." unique_id=698811209]
-visible = false
 layout_mode = 0
 offset_right = 1440.0
 offset_bottom = 720.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b4lbs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ekd0a")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ikbf6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_34ap4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ovcpp")

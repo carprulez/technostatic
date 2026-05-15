@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://dej6dfjumhox7"]
+
+[ext_resource type="Script" uid="uid://duc0u5asg4jcw" path="res://scripts/terminalMind.gd" id="1_w4ypv"]
+[ext_resource type="Texture2D" uid="uid://c03ebubik4ose" path="res://assets/ui/TerminalUI.png" id="2_eqhhe"]
+[ext_resource type="Theme" uid="uid://ddghnc760x4xr" path="res://themes/LineEdit.tres" id="3_uy7de"]
+[ext_resource type="Theme" uid="uid://du0m6gsybr0jp" path="res://themes/RichTextLabel.tres" id="4_6nclb"]
+[ext_resource type="Theme" uid="uid://cnbu2cekoxuqo" path="res://themes/Button.tres" id="5_3xakf"]
+
+[sub_resource type="Theme" id="Theme_u3usu"]
+VBoxContainer/constants/separation = 40
+
+[node name="Control" type="Control" unique_id=1220766469]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1440.0
+offset_bottom = 720.0
+script = ExtResource("1_w4ypv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=771020748]
+position = Vector2(720, 360)
+texture = ExtResource("2_eqhhe")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1304727465]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 607.0
+offset_right = 929.0
+offset_bottom = 658.0
+theme = ExtResource("3_uy7de")
+
+[node name="StaticText" type="RichTextLabel" parent="." unique_id=1423853623]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 182.0
+offset_right = 1210.0
+offset_bottom = 557.0
+theme = ExtResource("4_6nclb")
+text = "Hello USER, welcome to the Luximos colony ship. WE are en route to the Prima Loci system. OUR estimated time to planetfall on Loci II is 01100101 01101101 01100010 01110010 01100001 01100011 01100101 00100000 01110101 01110011 seconds.
+
+
+
+
+
+USER LOGIN REQUIRED"
+
+[node name="TextureButton" type="Button" parent="StaticText" unique_id=1591862291]
+z_index = 2
+layout_mode = 0
+offset_left = 266.0
+offset_top = 106.0
+offset_right = 394.0
+offset_bottom = 141.0
+theme = ExtResource("5_3xakf")
+
+[node name="FlavorText" type="RichTextLabel" parent="." unique_id=710771776]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 583.0
+offset_right = 1252.0
+offset_bottom = 659.0
+theme = ExtResource("4_6nclb")
+text = "Sys: AWOKEN
+Biotags: 1"
+
+[node name="Puzzle" type="VBoxContainer" parent="." unique_id=661621126]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 224.0
+offset_right = 879.0
+offset_bottom = 497.0
+theme = SubResource("Theme_u3usu")
+
+[node name="File1" type="Button" parent="Puzzle" unique_id=1468721984]
+layout_mode = 2
+theme = ExtResource("5_3xakf")
+text = "File 1 - Gravity Atrophy"
+
+[node name="File2" type="Button" parent="Puzzle" unique_id=1710322388]
+layout_mode = 2
+theme = ExtResource("5_3xakf")
+text = "File 2 - Climate Control Fever"
+
+[node name="File3" type="Button" parent="Puzzle" unique_id=740589725]
+layout_mode = 2
+theme = ExtResource("5_3xakf")
+text = "File 3 - Carbon Monoxide Poisoning"
+
+[node name="File4" type="Button" parent="Puzzle" unique_id=623388142]
+layout_mode = 2
+theme = ExtResource("5_3xakf")
+text = "TOTAL ASSIMILATION"
+
+[node name="GravityAtrophy" type="RichTextLabel" parent="." unique_id=1743256256]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 180.0
+offset_right = 1211.0
+offset_bottom = 539.0
+theme = ExtResource("4_6nclb")
+text = "Wellness Check – Parvo Trand
+Day 165 of Voyage
+
+Patient entered medbay seeking aid with apparent muscle degradation. Patient felt fatigued and weak. Patient comment upon intake was “I feel like everything is pushing in around me.” Upon regular medical examination, patient does seem to be experiencing acute muscle atrophy. Prescribed patient with 45 minutes of cardio a cycle. Will continue to monitor and follow up if the need arises.
+"
+
+[node name="CardioButton" type="Button" parent="GravityAtrophy" unique_id=545121974]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 280.0
+offset_right = 267.0
+offset_bottom = 315.0
+theme = ExtResource("5_3xakf")
+text = "cardio"
+
+[node name="ClimConFever" type="RichTextLabel" parent="." unique_id=1115745268]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 180.0
+offset_right = 1211.0
+offset_bottom = 539.0
+theme = ExtResource("4_6nclb")
+text = "Wellness Check - Dawn Varren
+Day 322 of Voyage
+
+Patient entered medbay looking pale and heavily perspirating. Patient reported symptoms similar to the common influenza virus that was eradicated decades ago. Patient commented that “the air smelled different from normal.” Alerting maintenance that a climate control issue has occurred in the habitation pods. Prescribed patient an anitbiotic and 3 days of self-quarantine. Set up meals for patient to receive correct nutrients to dissuade any bacteria from spreading in the body.
+"
+
+[node name="AnButton" type="Button" parent="ClimConFever" unique_id=720272256]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 280.0
+offset_right = 318.0
+offset_bottom = 315.0
+theme = ExtResource("5_3xakf")
+text = "an"
+
+[node name="CarbMonoPoison" type="RichTextLabel" parent="." unique_id=1600088067]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 180.0
+offset_right = 1211.0
+offset_bottom = 539.0
+theme = ExtResource("4_6nclb")
+text = "Wellness Check - Landon Whitlock
+Day 502 of Voyage
+
+Patient was rushed into medbay by medical personnel. Patient was reported to have been hallucinating. Bystanders and medical personnel heard patient mumbling about “the Long Burrower in the rock.” Final diagnosis was decided to be carbon monoxide poisoning. Maintenance has been alerted to the issue. We are hoping that the climate control issues that have been arising do not effect anymore of the colonists.
+"
+
+[node name="ColonistsButton" type="Button" parent="CarbMonoPoison" unique_id=1967933273]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 315.0
+offset_right = 525.0
+offset_bottom = 350.0
+theme = ExtResource("5_3xakf")
+text = "colonists"
+
+[node name="ReturnButton" type="Button" parent="." unique_id=206328074]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 569.0
+offset_right = 788.0
+offset_bottom = 592.0
+theme = ExtResource("5_3xakf")
+text = "RETURN"
