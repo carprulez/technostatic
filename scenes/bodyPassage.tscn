@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vwxg5opg13n8"]
 
-[ext_resource type="Texture2D" uid="uid://cuih1884ntvbo" path="res://icon.svg" id="1_b4lbs"]
 [ext_resource type="Script" uid="uid://c2gc0en6jv82h" path="res://scripts/bodyPassage.gd" id="1_ekd0a"]
+[ext_resource type="Texture2D" uid="uid://dwptcx1axtyhc" path="res://assets/vignettes/bodyPassage.png" id="2_ekd0a"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4lbs"]
 
@@ -22,8 +22,7 @@ script = ExtResource("1_ekd0a")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=322180691]
 position = Vector2(720.49994, 360)
-scale = Vector2(11.257812, 5.625)
-texture = ExtResource("1_b4lbs")
+texture = ExtResource("2_ekd0a")
 
 [node name="Button" type="Button" parent="." unique_id=698811209]
 layout_mode = 0
