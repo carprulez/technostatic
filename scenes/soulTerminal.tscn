@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0aqpmjmvcgj8"]
 
-[ext_resource type="Script" uid="uid://duc0u5asg4jcw" path="res://scripts/terminalMind.gd" id="1_i65i7"]
+[ext_resource type="Script" uid="uid://bfwrrh8dxjm3w" path="res://scripts/terminalSoul.gd" id="1_i65i7"]
 [ext_resource type="Texture2D" uid="uid://c03ebubik4ose" path="res://assets/ui/TerminalUI.png" id="2_t5oxv"]
 [ext_resource type="Theme" uid="uid://ddghnc760x4xr" path="res://themes/LineEdit.tres" id="3_bi4nd"]
 [ext_resource type="Theme" uid="uid://du0m6gsybr0jp" path="res://themes/RichTextLabel.tres" id="4_num17"]
