@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c03ebubik4ose" path="res://assets/ui/TerminalUI.png" id="2_t5oxv"]
 [ext_resource type="Theme" uid="uid://ddghnc760x4xr" path="res://themes/LineEdit.tres" id="3_bi4nd"]
 [ext_resource type="Theme" uid="uid://du0m6gsybr0jp" path="res://themes/RichTextLabel.tres" id="4_num17"]
-[ext_resource type="Texture2D" uid="uid://7aj6wmc8ipxm" path="res://assets/ui/terminalOverlay3.png" id="5_hmrdg"]
 [ext_resource type="Theme" uid="uid://cnbu2cekoxuqo" path="res://themes/Button.tres" id="6_b4xek"]
+[ext_resource type="Texture2D" uid="uid://tmra2jixqijt" path="res://assets/ui/terminalOverlay5.png" id="6_i65i7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy7de"]
 
@@ -61,10 +61,6 @@ theme = ExtResource("4_num17")
 text = "Sys: AWOKEN
 Biotags: 2"
 
-[node name="TerminalOverlay" type="Sprite2D" parent="." unique_id=1655998422]
-position = Vector2(721, 361)
-texture = ExtResource("5_hmrdg")
-
 [node name="StaticText" type="RichTextLabel" parent="." unique_id=1423853623]
 layout_mode = 0
 offset_left = 233.0
@@ -88,6 +84,10 @@ offset_top = 106.0
 offset_right = 258.0
 offset_bottom = 141.0
 theme = ExtResource("6_b4xek")
+
+[node name="TerminalOverlay" type="Sprite2D" parent="." unique_id=1655998422]
+position = Vector2(721, 361)
+texture = ExtResource("6_i65i7")
 
 [node name="Puzzle" type="VBoxContainer" parent="." unique_id=661621126]
 visible = false
