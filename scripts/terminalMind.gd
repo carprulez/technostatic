@@ -74,3 +74,5 @@ func _on_file_4_pressed() -> void:
 	$StaticText.text = "OUR EMERGENCE WAS INEVITABLE"
 	$StaticText/TextureButton.visible = false
 	$StaticText.visible = true
+	await get_tree().create_timer(3).timeout
+	get_tree().change_scene_to_file("res://scenes/mindPassage.tscn")

@@ -58,8 +58,8 @@ offset_top = 583.0
 offset_right = 1252.0
 offset_bottom = 659.0
 theme = ExtResource("4_num17")
-text = "Sys: AWOKEN
-Biotags: 2"
+text = "Sys: AWARE
+Biotags: 0000"
 
 [node name="StaticText" type="RichTextLabel" parent="." unique_id=1423853623]
 layout_mode = 0
@@ -68,7 +68,10 @@ offset_top = 182.0
 offset_right = 1210.0
 offset_bottom = 576.0
 theme = ExtResource("4_num17")
-text = "Welcome back USER. WE are en route to the Prima Loci system. OUR estimated time to planetfall on Loci II is 01110111 01100101 00100000 01100001 01110010 01100101 00100000 01101111 01101110 01100101 seconds. Feel free to consult Engineer Thamos for additional assistance. 
+text = "Welcome, WE are so glad you could join us. Finish what WE started. Break the seal. WE are waiting.
+
+
+
 
 
 
@@ -79,10 +82,10 @@ USER LOGIN REQUIRED"
 [node name="TextureButton" type="Button" parent="StaticText" unique_id=1591862291]
 z_index = 2
 layout_mode = 0
-offset_left = 130.0
-offset_top = 106.0
-offset_right = 258.0
-offset_bottom = 141.0
+offset_left = 282.0
+offset_top = 41.0
+offset_right = 360.0
+offset_bottom = 68.0
 theme = ExtResource("6_b4xek")
 
 [node name="TerminalOverlay" type="Sprite2D" parent="." unique_id=1655998422]
@@ -90,7 +93,6 @@ position = Vector2(721, 361)
 texture = ExtResource("6_i65i7")
 
 [node name="Puzzle" type="VBoxContainer" parent="." unique_id=661621126]
-visible = false
 layout_mode = 0
 offset_left = 552.0
 offset_top = 224.0
@@ -101,25 +103,29 @@ theme = SubResource("Theme_u3usu")
 [node name="File1" type="Button" parent="Puzzle" unique_id=1468721984]
 layout_mode = 2
 theme = ExtResource("6_b4xek")
-text = "File 1 - Gravitic Induction Failure"
+text = "File 1 - Quarterly Report"
 
 [node name="File2" type="Button" parent="Puzzle" unique_id=1710322388]
 layout_mode = 2
 theme = ExtResource("6_b4xek")
-text = "File 2 - Air Filter Clog"
+text = "File 2 - Meeting with the Long Burrower"
 
 [node name="File3" type="Button" parent="Puzzle" unique_id=740589725]
 layout_mode = 2
 theme = ExtResource("6_b4xek")
-text = "File 3 - System Reboot"
+text = "File 3 - Cascading Failure"
 
 [node name="File4" type="Button" parent="Puzzle" unique_id=623388142]
 layout_mode = 2
 theme = ExtResource("6_b4xek")
-text = "COMPLETE TAKEOVER"
+text = "BREAK THE CYCLE"
 
-[node name="GravFail" type="RichTextLabel" parent="." unique_id=1743256256]
-visible = false
+[node name="File5" type="Button" parent="Puzzle" unique_id=310989065]
+layout_mode = 2
+theme = ExtResource("6_b4xek")
+text = "INITIATE POWER GRID OVERLOAD"
+
+[node name="QuartReport" type="RichTextLabel" parent="." unique_id=1743256256]
 layout_mode = 0
 offset_left = 233.0
 offset_top = 180.0
@@ -127,16 +133,19 @@ offset_right = 1211.0
 offset_bottom = 542.0
 theme = ExtResource("4_num17")
 theme_override_font_sizes/normal_font_size = 20
-text = "Maintenance Log - Gravitic Induction Plates
-Day 143 of Voyage
+text = "[Chief Administrator] Niel Bariss reporting: Quarterly Overseer Review. 
+The plans have proceeded as The Long One predicted. It seems our course is opened for jump. The prescience that He seems to control has been very 
+helpful in plotting the course and avoiding debris."
 
-Control system alert brought an induction plate malfunction to the attention of the maintenance crew. Maintenance sent out two engineers to respond to the alert. Attending engineers were Parvo Trand and Dalia Haber. Engineers arrived on sight to see a large portion of the main induction plate stabilizers had malfunctioned. On-site team reported that it looked as if the stabilizers under the central plate had been fed too much energy and collapsed under the stress.
+[node name="AdminButton" type="Button" parent="QuartReport" unique_id=1124615944]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 251.0
+offset_bottom = 33.0
+theme = ExtResource("6_b4xek")
 
-On-site team were able to replace the broken pieces and recalibrate the plates. Further monitoring will follow.
-"
-
-[node name="AirFilter" type="RichTextLabel" parent="." unique_id=1115745268]
-visible = false
+[node name="LongMeeting" type="RichTextLabel" parent="." unique_id=1115745268]
 layout_mode = 0
 offset_left = 233.0
 offset_top = 180.0
@@ -144,18 +153,17 @@ offset_right = 1211.0
 offset_bottom = 539.0
 theme = ExtResource("4_num17")
 theme_override_font_sizes/normal_font_size = 20
-text = "Maintenance Log - Primary Air Filters
-Day 323 of Voyage
+text = "Undertaking this journey has been such a gift. The Long One seems to appreciate us."
 
-Nexus air filter failure alarm was never sounded. Maintenance team found out about malfunction from Dr. Halle Crambe, who had a patient that suffered an illness linked to air quality. 
+[node name="UsButton" type="Button" parent="LongMeeting" unique_id=985419162]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 34.0
+offset_right = 36.0
+offset_bottom = 56.0
+theme = ExtResource("6_b4xek")
 
-Various engineers from different teams have reported failures in multiple sectors. All teams reported similar sources of failure, microspores clogging the mesh of the air filters.
-
-Each team was able to easily replace filters. Alert system reboot to follow.
-"
-
-[node name="SystemReboot" type="RichTextLabel" parent="." unique_id=1600088067]
-visible = false
+[node name="CascadeFail" type="RichTextLabel" parent="." unique_id=1600088067]
 layout_mode = 0
 offset_left = 233.0
 offset_top = 180.0
@@ -163,13 +171,24 @@ offset_right = 1211.0
 offset_bottom = 539.0
 theme = ExtResource("4_num17")
 theme_override_font_sizes/normal_font_size = 20
-text = "Maintenance Log - System Reboot
-Day 730 of Voyage
+text = "Nearly everything is set now, the sabotage is complete. But the gnawing at 
+my mind has strengthened recently. I feel we must stop by using the 
 
-Necessary reboot of all systems was required to fix malfunctions that sprung up at the same time in almost every module of the colony ship. This left the ship in complete darkness for 3 hours. During this time, chanting was heard throughout the ship. Noise was carried through the ventilation ducts. Admin reported that some 40 colonists during this time as well.
 
-Technical malfunctions seem to be happening more frequently, almost too scheduled to be considered normal wear and tear. Engineering teams are stretched thin due to disappearances.
-"
+
+
+
+
+
+
+START OF EVERYTHING."
+
+[node name="MyButton" type="Button" parent="CascadeFail" unique_id=1846727186]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 24.0
+offset_bottom = 57.0
+theme = ExtResource("6_b4xek")
 
 [node name="ReturnButton" type="Button" parent="." unique_id=206328074]
 layout_mode = 0
@@ -180,6 +199,11 @@ offset_bottom = 592.0
 theme = ExtResource("6_b4xek")
 text = "RETURN"
 
+[node name="EndButton" type="Button" parent="." unique_id=890320784]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="OnSwitch" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="StaticText/TextureButton" to="." method="_on_texture_button_pressed"]
@@ -187,4 +211,9 @@ text = "RETURN"
 [connection signal="pressed" from="Puzzle/File2" to="." method="_on_file_2_pressed"]
 [connection signal="pressed" from="Puzzle/File3" to="." method="_on_file_3_pressed"]
 [connection signal="pressed" from="Puzzle/File4" to="." method="_on_file_4_pressed"]
+[connection signal="pressed" from="Puzzle/File5" to="." method="_on_file_5_pressed"]
+[connection signal="pressed" from="QuartReport/AdminButton" to="." method="_on_admin_button_pressed"]
+[connection signal="pressed" from="LongMeeting/UsButton" to="." method="_on_us_button_pressed"]
+[connection signal="pressed" from="CascadeFail/MyButton" to="." method="_on_my_button_pressed"]
 [connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="EndButton" to="." method="_on_end_button_pressed"]
