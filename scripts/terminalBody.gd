@@ -118,4 +118,4 @@ func _on_file_4_pressed() -> void:
 
 
 func _on_line_edit_text_changed(new_text: String) -> void:
-	pass # Replace with function body.
+	$Typing.play()

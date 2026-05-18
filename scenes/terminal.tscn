@@ -8,7 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://c7nu5gv7exg6y" path="res://assets/ui/terminalOverlay1.png" id="5_ojupu"]
 [ext_resource type="AudioStream" uid="uid://b1237kqcadtx3" path="res://assets/audio/mouseClick.wav" id="7_2u1pf"]
 [ext_resource type="AudioStream" uid="uid://htwlto4q3ob5" path="res://assets/audio/flipSwitch.wav" id="8_g6hjw"]
+[ext_resource type="AudioStream" uid="uid://yjg0mn2wvvy6" path="res://assets/audio/typing1.wav" id="9_5on1r"]
 [ext_resource type="AudioStream" uid="uid://c2hvl75newa2q" path="res://assets/audio/enterKey.wav" id="9_f8hcy"]
+[ext_resource type="AudioStream" uid="uid://bua2pjot5hetb" path="res://assets/audio/typing2.wav" id="10_ih5y1"]
+[ext_resource type="AudioStream" uid="uid://crraq31q1ckd8" path="res://assets/audio/typing3.wav" id="11_gpr67"]
+[ext_resource type="AudioStream" uid="uid://wgkpgepwoatv" path="res://assets/audio/typing4.wav" id="12_ce77j"]
+[ext_resource type="AudioStream" uid="uid://ci1v3u2bdwbuj" path="res://assets/audio/typing5.wav" id="13_md0vr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhnb1"]
 
@@ -22,6 +27,14 @@
 
 [sub_resource type="Theme" id="Theme_ojupu"]
 VBoxContainer/constants/separation = 40
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_46jov"]
+streams_count = 5
+stream_0/stream = ExtResource("9_5on1r")
+stream_1/stream = ExtResource("10_ih5y1")
+stream_2/stream = ExtResource("11_gpr67")
+stream_3/stream = ExtResource("12_ce77j")
+stream_4/stream = ExtResource("13_md0vr")
 
 [node name="Control" type="Control" unique_id=222700412]
 layout_mode = 3
@@ -201,6 +214,7 @@ stream = ExtResource("7_2u1pf")
 stream = ExtResource("8_g6hjw")
 
 [node name="Typing" type="AudioStreamPlayer" parent="." unique_id=224580985]
+stream = SubResource("AudioStreamRandomizer_46jov")
 
 [node name="Enter" type="AudioStreamPlayer" parent="." unique_id=960659270]
 stream = ExtResource("9_f8hcy")
