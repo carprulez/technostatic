@@ -24,6 +24,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	$Switch.play()
 	overlay.texture = newOverlay
 	$StaticText.visible = true
 	$FlavorText.visible = true
@@ -40,28 +41,33 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 
 
 func _on_texture_button_pressed() -> void:
+	$Click.play()
 	print("SUCCESS")
 
 
 func _on_file_1_pressed() -> void:
+	$Click.play()
 	$Puzzle.visible = false
 	$GravFail.visible = true
 	$ReturnButton.visible = true
 
 
 func _on_file_2_pressed() -> void:
+	$Click.play()
 	$Puzzle.visible = false
 	$AirFilter.visible = true
 	$ReturnButton.visible = true
 
 
 func _on_file_3_pressed() -> void:
+	$Click.play()
 	$Puzzle.visible = false
 	$SystemReboot.visible = true
 	$ReturnButton.visible = true
 
 
 func _on_return_button_pressed() -> void:
+	$Click.play()
 	$ReturnButton.visible = false
 	$GravFail.visible = false
 	$AirFilter.visible = false
@@ -70,6 +76,7 @@ func _on_return_button_pressed() -> void:
 
 
 func _on_file_4_pressed() -> void:
+	$Click.play()
 	$Puzzle.visible = false
 	$StaticText.text = "OUR EMERGENCE WAS INEVITABLE"
 	$StaticText/TextureButton.visible = false

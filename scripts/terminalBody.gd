@@ -24,6 +24,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	$Switch.play()
 	overlay.texture = newOverlay
 	$StaticText.visible = true
 	$FlavorText.visible = true
@@ -40,16 +41,19 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 
 
 func _on_texture_button_pressed() -> void:
+	$Click.play()
 	print("SUCCESS")
 
 
 func _on_file_1_pressed() -> void:
+	$Click.play()
 	$Puzzle.visible = false
 	$GravityAtrophy.visible = true
 	$ReturnButton.visible = true
 
 
 func _on_cardio_button_pressed() -> void:
+	$Click.play()
 	$GravityAtrophy.text = "Wellness Check – Parvo Trand
 Day 165 of Voyage
 
@@ -58,12 +62,14 @@ Patient entered medbay seeking aid with apparent muscle degradation. Patient fel
 
 
 func _on_file_2_pressed() -> void:
+	$Click.play()
 	$Puzzle.visible = false
 	$ClimConFever.visible = true
 	$ReturnButton.visible = true
 
 
 func _on_an_button_pressed() -> void:
+	$Click.play()
 	$ClimConFever.text = "Wellness Check - Dawn Varren
 Day 322 of Voyage
 
@@ -73,12 +79,14 @@ Patient entered medbay looking pale and heavily perspirating. Patient reported s
 
 
 func _on_file_3_pressed() -> void:
+	$Click.play()
 	$Puzzle.visible = false
 	$CarbMonoPoison.visible = true
 	$ReturnButton.visible = true
 
 
 func _on_colonists_button_pressed() -> void:
+	$Click.play()
 	$CarbMonoPoison.text = "Wellness Check - Landon Whitlock
 Day 502 of Voyage
 
@@ -88,6 +96,7 @@ Patient was rushed into medbay by medical personnel. Patient was reported to hav
 
 
 func _on_return_button_pressed() -> void:
+	$Click.play()
 	$ReturnButton.visible = false
 	$GravityAtrophy.visible = false
 	$ClimConFever.visible = false
@@ -97,9 +106,14 @@ func _on_return_button_pressed() -> void:
 
 
 func _on_file_4_pressed() -> void:
+	$Click.play()
 	$Puzzle.visible = false
 	$StaticText.text = "COME JOIN OUR ETERNAL EMBRACE"
 	$StaticText/TextureButton.visible = false
 	$StaticText.visible = true
 	await get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://scenes/bodyPassage.tscn")
+
+
+func _on_line_edit_text_changed(new_text: String) -> void:
+	pass # Replace with function body.

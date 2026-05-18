@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dw2g07epjvjf3" path="res://scripts/menu.gd" id="1_con2f"]
 [ext_resource type="Texture2D" uid="uid://ch5416888eset" path="res://assets/ui/TechnostaticMenu.png" id="1_vjb58"]
 [ext_resource type="Theme" uid="uid://cnbu2cekoxuqo" path="res://themes/Button.tres" id="3_con2f"]
+[ext_resource type="AudioStream" uid="uid://b1237kqcadtx3" path="res://assets/audio/mouseClick.wav" id="4_mhnvy"]
 
 [node name="Control" type="Control" unique_id=1808037000]
 layout_mode = 3
@@ -30,6 +31,9 @@ text = "Play"
 layout_mode = 2
 theme = ExtResource("3_con2f")
 text = "Quit"
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1727399218]
+stream = ExtResource("4_mhnvy")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_quit_pressed"]

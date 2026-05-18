@@ -6,6 +6,8 @@
 [ext_resource type="Theme" uid="uid://du0m6gsybr0jp" path="res://themes/RichTextLabel.tres" id="4_num17"]
 [ext_resource type="Theme" uid="uid://cnbu2cekoxuqo" path="res://themes/Button.tres" id="6_b4xek"]
 [ext_resource type="Texture2D" uid="uid://tmra2jixqijt" path="res://assets/ui/terminalOverlay5.png" id="6_i65i7"]
+[ext_resource type="AudioStream" uid="uid://b1237kqcadtx3" path="res://assets/audio/mouseClick.wav" id="7_bi4nd"]
+[ext_resource type="AudioStream" uid="uid://htwlto4q3ob5" path="res://assets/audio/flipSwitch.wav" id="8_num17"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy7de"]
 
@@ -203,6 +205,12 @@ text = "RETURN"
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=75110349]
+stream = ExtResource("7_bi4nd")
+
+[node name="Switch" type="AudioStreamPlayer" parent="." unique_id=829206750]
+stream = ExtResource("8_num17")
 
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="OnSwitch" to="." method="_on_button_pressed"]
