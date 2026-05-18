@@ -29,9 +29,11 @@ func _on_button_pressed() -> void:
 	$StaticText.visible = true
 	$FlavorText.visible = true
 	user_input.editable = true
+	$OnSwitch.visible = false
 
 
 func _on_line_edit_text_submitted(new_text: String) -> void:
+	$Enter.play()
 	if new_text == "thamos":
 		$StaticText.visible = false
 		$Puzzle.visible = true

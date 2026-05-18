@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://7aj6wmc8ipxm" path="res://assets/ui/terminalOverlay3.png" id="5_6nclb"]
 [ext_resource type="AudioStream" uid="uid://b1237kqcadtx3" path="res://assets/audio/mouseClick.wav" id="7_u3usu"]
 [ext_resource type="AudioStream" uid="uid://htwlto4q3ob5" path="res://assets/audio/flipSwitch.wav" id="8_srigh"]
+[ext_resource type="AudioStream" uid="uid://c2hvl75newa2q" path="res://assets/audio/enterKey.wav" id="9_srigh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy7de"]
 
@@ -183,6 +184,9 @@ stream = ExtResource("7_u3usu")
 
 [node name="Switch" type="AudioStreamPlayer" parent="." unique_id=909102459]
 stream = ExtResource("8_srigh")
+
+[node name="Enter" type="AudioStreamPlayer" parent="." unique_id=395691179]
+stream = ExtResource("9_srigh")
 
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="OnSwitch" to="." method="_on_button_pressed"]
