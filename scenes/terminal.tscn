@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://crraq31q1ckd8" path="res://assets/audio/typing3.wav" id="11_gpr67"]
 [ext_resource type="AudioStream" uid="uid://wgkpgepwoatv" path="res://assets/audio/typing4.wav" id="12_ce77j"]
 [ext_resource type="AudioStream" uid="uid://ci1v3u2bdwbuj" path="res://assets/audio/typing5.wav" id="13_md0vr"]
+[ext_resource type="AudioStream" uid="uid://ck02ec8a4lxn1" path="res://assets/audio/embrace.wav" id="15_ih5y1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhnb1"]
 
@@ -218,6 +219,10 @@ stream = SubResource("AudioStreamRandomizer_46jov")
 
 [node name="Enter" type="AudioStreamPlayer" parent="." unique_id=960659270]
 stream = ExtResource("9_f8hcy")
+
+[node name="Embrace" type="AudioStreamPlayer" parent="." unique_id=1348806905]
+stream = ExtResource("15_ih5y1")
+volume_db = -19.738
 
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

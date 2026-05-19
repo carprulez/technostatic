@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://crraq31q1ckd8" path="res://assets/audio/typing3.wav" id="12_4s24k"]
 [ext_resource type="AudioStream" uid="uid://wgkpgepwoatv" path="res://assets/audio/typing4.wav" id="13_uaqxh"]
 [ext_resource type="AudioStream" uid="uid://ci1v3u2bdwbuj" path="res://assets/audio/typing5.wav" id="14_uhafk"]
+[ext_resource type="AudioStream" uid="uid://b7umxv67w785s" path="res://assets/audio/release.wav" id="15_yh2kf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy7de"]
 
@@ -109,6 +110,7 @@ position = Vector2(721, 361)
 texture = ExtResource("6_i65i7")
 
 [node name="Puzzle" type="VBoxContainer" parent="." unique_id=661621126]
+visible = false
 layout_mode = 0
 offset_left = 552.0
 offset_top = 224.0
@@ -142,6 +144,7 @@ theme = ExtResource("6_b4xek")
 text = "INITIATE POWER GRID OVERLOAD"
 
 [node name="QuartReport" type="RichTextLabel" parent="." unique_id=1743256256]
+visible = false
 layout_mode = 0
 offset_left = 233.0
 offset_top = 180.0
@@ -162,6 +165,7 @@ offset_bottom = 33.0
 theme = ExtResource("6_b4xek")
 
 [node name="LongMeeting" type="RichTextLabel" parent="." unique_id=1115745268]
+visible = false
 layout_mode = 0
 offset_left = 233.0
 offset_top = 180.0
@@ -180,6 +184,7 @@ offset_bottom = 56.0
 theme = ExtResource("6_b4xek")
 
 [node name="CascadeFail" type="RichTextLabel" parent="." unique_id=1600088067]
+visible = false
 layout_mode = 0
 offset_left = 233.0
 offset_top = 180.0
@@ -231,6 +236,10 @@ stream = ExtResource("9_num17")
 
 [node name="Typing" type="AudioStreamPlayer" parent="." unique_id=275110358]
 stream = SubResource("AudioStreamRandomizer_7lsla")
+
+[node name="Release" type="AudioStreamPlayer" parent="." unique_id=594945986]
+stream = ExtResource("15_yh2kf")
+volume_db = -20.07
 
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="OnSwitch" to="." method="_on_button_pressed"]

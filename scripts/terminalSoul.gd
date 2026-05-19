@@ -48,7 +48,7 @@ func _on_line_edit_text_submitted(new_text: String) -> void:
 
 func _on_texture_button_pressed() -> void:
 	$Click.play()
-	print("SUCCESS")
+	$Release.play()
 
 
 func _on_file_1_pressed() -> void:
