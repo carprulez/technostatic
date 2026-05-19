@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c0xjgpmb1p8q"]
 
+[ext_resource type="Texture2D" uid="uid://cdt5021i0umtp" path="res://assets/vignettes/goodEnding.png" id="1_njlso"]
+
 [node name="Control" type="Control" unique_id=717890643]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=404823924]
+position = Vector2(720, 360)
+texture = ExtResource("1_njlso")
