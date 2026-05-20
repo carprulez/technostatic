@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://wgkpgepwoatv" path="res://assets/audio/typing4.wav" id="13_uaqxh"]
 [ext_resource type="AudioStream" uid="uid://ci1v3u2bdwbuj" path="res://assets/audio/typing5.wav" id="14_uhafk"]
 [ext_resource type="AudioStream" uid="uid://b7umxv67w785s" path="res://assets/audio/release.wav" id="15_yh2kf"]
+[ext_resource type="AudioStream" uid="uid://7vsy7362n806" path="res://assets/audio/jumpscare3.wav" id="16_4s24k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy7de"]
 
@@ -165,7 +166,6 @@ offset_bottom = 33.0
 theme = ExtResource("6_b4xek")
 
 [node name="LongMeeting" type="RichTextLabel" parent="." unique_id=1115745268]
-visible = false
 layout_mode = 0
 offset_left = 233.0
 offset_top = 180.0
@@ -222,8 +222,11 @@ text = "RETURN"
 
 [node name="EndButton" type="Button" parent="." unique_id=890320784]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 283.0
+offset_top = 249.0
+offset_right = 436.0
+offset_bottom = 293.0
+theme = ExtResource("6_b4xek")
 
 [node name="Click" type="AudioStreamPlayer" parent="." unique_id=75110349]
 stream = ExtResource("7_bi4nd")
@@ -241,6 +244,10 @@ stream = SubResource("AudioStreamRandomizer_7lsla")
 stream = ExtResource("15_yh2kf")
 volume_db = -20.07
 
+[node name="Jumpscare" type="AudioStreamPlayer" parent="." unique_id=500010806]
+stream = ExtResource("16_4s24k")
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="OnSwitch" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="StaticText/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dej6dfjumhox7"]
 
 [ext_resource type="Script" uid="uid://duc0u5asg4jcw" path="res://scripts/terminalMind.gd" id="1_w4ypv"]
-[ext_resource type="Texture2D" uid="uid://c03ebubik4ose" path="res://assets/ui/TerminalUI.png" id="2_eqhhe"]
+[ext_resource type="Texture2D" uid="uid://c77ouay532ge1" path="res://assets/ui/terminalUI2.png" id="2_ir172"]
 [ext_resource type="Theme" uid="uid://ddghnc760x4xr" path="res://themes/LineEdit.tres" id="3_uy7de"]
 [ext_resource type="Theme" uid="uid://du0m6gsybr0jp" path="res://themes/RichTextLabel.tres" id="4_6nclb"]
 [ext_resource type="Theme" uid="uid://cnbu2cekoxuqo" path="res://themes/Button.tres" id="5_3xakf"]
@@ -15,6 +15,9 @@
 [ext_resource type="AudioStream" uid="uid://wgkpgepwoatv" path="res://assets/audio/typing4.wav" id="13_6jxru"]
 [ext_resource type="AudioStream" uid="uid://ci1v3u2bdwbuj" path="res://assets/audio/typing5.wav" id="14_h6i57"]
 [ext_resource type="AudioStream" uid="uid://ugreub5sqo7n" path="res://assets/audio/one.wav" id="15_gx1gq"]
+[ext_resource type="Texture2D" uid="uid://c1rcn8x2jpm6n" path="res://assets/ui/hiddenPanel.png" id="16_6jxru"]
+[ext_resource type="AudioStream" uid="uid://cecyka0xpucv4" path="res://assets/audio/reveal.wav" id="16_h6i57"]
+[ext_resource type="AudioStream" uid="uid://c1wg028g0vrq5" path="res://assets/audio/jumpscare2.wav" id="17_h6i57"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy7de"]
 
@@ -46,7 +49,7 @@ script = ExtResource("1_w4ypv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=771020748]
 position = Vector2(720, 360)
-texture = ExtResource("2_eqhhe")
+texture = ExtResource("2_ir172")
 
 [node name="LineEdit" type="LineEdit" parent="." unique_id=1304727465]
 layout_mode = 0
@@ -209,6 +212,22 @@ stream = SubResource("AudioStreamRandomizer_ujltk")
 stream = ExtResource("15_gx1gq")
 volume_db = -20.415
 
+[node name="Reveal" type="AudioStreamPlayer" parent="." unique_id=1526859961]
+stream = ExtResource("16_h6i57")
+
+[node name="Jumpscare" type="AudioStreamPlayer" parent="." unique_id=552462011]
+stream = ExtResource("17_h6i57")
+
+[node name="HiddenPanel" type="Button" parent="." unique_id=1215611717]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 84.0
+offset_right = 947.0
+offset_bottom = 143.0
+theme = ExtResource("5_3xakf")
+icon = ExtResource("16_6jxru")
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="OnSwitch" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="StaticText/TextureButton" to="." method="_on_texture_button_pressed"]
@@ -217,3 +236,4 @@ volume_db = -20.415
 [connection signal="pressed" from="Puzzle/File3" to="." method="_on_file_3_pressed"]
 [connection signal="pressed" from="Puzzle/File4" to="." method="_on_file_4_pressed"]
 [connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="HiddenPanel" to="." method="_on_hidden_panel_pressed"]

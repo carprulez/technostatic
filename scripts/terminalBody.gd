@@ -113,7 +113,9 @@ func _on_file_4_pressed() -> void:
 	$StaticText.text = "COME JOIN OUR ETERNAL EMBRACE"
 	$StaticText/TextureButton.visible = false
 	$StaticText.visible = true
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(0.5).timeout
+	$Jumpscare.play()
+	await($Jumpscare.finished)
 	get_tree().change_scene_to_file("res://scenes/bodyPassage.tscn")
 
 

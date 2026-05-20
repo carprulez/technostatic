@@ -83,5 +83,16 @@ func _on_file_4_pressed() -> void:
 	$StaticText.text = "OUR EMERGENCE WAS INEVITABLE"
 	$StaticText/TextureButton.visible = false
 	$StaticText.visible = true
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(0.5).timeout
+	$Jumpscare.play()
+	await($Jumpscare.finished)
 	get_tree().change_scene_to_file("res://scenes/mindPassage.tscn")
+
+
+func _on_hidden_panel_pressed() -> void:
+	$HiddenPanel.visible = false
+	$Reveal.play()
+
+
+func _on_line_edit_text_changed(new_text: String) -> void:
+	$Typing.play()

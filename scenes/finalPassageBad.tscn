@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dnxkg50e2fr3o"]
 
+[ext_resource type="Script" uid="uid://d0cwv8iapi3l6" path="res://scripts/badEnding.gd" id="1_1mlxp"]
 [ext_resource type="Texture2D" uid="uid://d3ervrgcc6v2u" path="res://assets/vignettes/badEnding.png" id="1_ob8pw"]
+[ext_resource type="PackedScene" uid="uid://bd17dlb5rshpl" path="res://scenes/fade.tscn" id="3_ee7cm"]
 
 [node name="Control" type="Control" unique_id=1060364305]
 layout_mode = 3
@@ -9,7 +11,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1mlxp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505410511]
 position = Vector2(720, 360)
 texture = ExtResource("1_ob8pw")
+
+[node name="Fade" parent="." unique_id=793737549 instance=ExtResource("3_ee7cm")]
+visible = false

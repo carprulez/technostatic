@@ -101,11 +101,14 @@ func _on_file_5_pressed() -> void:
 	$StaticText/TextureButton.visible = false
 	user_input.visible = false
 	$StaticText.visible = true
+	$EndButton.visible = true
 
 
 func _on_end_button_pressed() -> void:
 	$Click.play()
 	await($Click.finished)
+	$Jumpscare.play()
+	await($Jumpscare.finished)
 	get_tree().change_scene_to_file("res://scenes/finalPassageGood.tscn")
 
 
@@ -137,3 +140,7 @@ YOUR mind has strengthened recently. I feel we must stop by using the
 
 START OF EVERYTHING."
 	$CascadeFail/MyButton.visible = false
+
+
+func _on_line_edit_text_changed(new_text: String) -> void:
+	$Typing.play()
