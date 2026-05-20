@@ -18,3 +18,4 @@ position = Vector2(720, 360)
 texture = ExtResource("1_ob8pw")
 
 [node name="Fade" parent="." unique_id=793737549 instance=ExtResource("3_ee7cm")]
+visible = false

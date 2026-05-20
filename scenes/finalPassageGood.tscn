@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://c0xjgpmb1p8q"]
 
 [ext_resource type="Texture2D" uid="uid://cdt5021i0umtp" path="res://assets/vignettes/goodEnding.png" id="1_njlso"]
+[ext_resource type="Script" uid="uid://kqw6bbuowghq" path="res://scripts/goodEnding.gd" id="1_q441j"]
+[ext_resource type="AudioStream" uid="uid://crojuc548wawy" path="res://assets/audio/finalExplosion.wav" id="3_f8ks1"]
+[ext_resource type="AudioStream" uid="uid://b42vkwmqhydch" path="res://assets/audio/finalExplosion2.wav" id="4_1ji1r"]
+[ext_resource type="AudioStream" uid="uid://vccs03m7saai" path="res://assets/audio/finalExplosion3.wav" id="5_07pkd"]
+[ext_resource type="PackedScene" uid="uid://bd17dlb5rshpl" path="res://scenes/fade.tscn" id="6_f8ks1"]
 
 [node name="Control" type="Control" unique_id=717890643]
 layout_mode = 3
@@ -9,7 +14,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_q441j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=404823924]
 position = Vector2(720, 360)
 texture = ExtResource("1_njlso")
+
+[node name="Explode1" type="AudioStreamPlayer" parent="." unique_id=448112953]
+stream = ExtResource("3_f8ks1")
+
+[node name="Explode2" type="AudioStreamPlayer" parent="." unique_id=1995605342]
+stream = ExtResource("4_1ji1r")
+
+[node name="Explode3" type="AudioStreamPlayer" parent="." unique_id=261401616]
+stream = ExtResource("5_07pkd")
+
+[node name="Fade" parent="." unique_id=793737549 instance=ExtResource("6_f8ks1")]

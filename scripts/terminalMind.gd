@@ -52,6 +52,8 @@ func _on_file_1_pressed() -> void:
 	$Puzzle.visible = false
 	$GravFail.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
+
 
 
 func _on_file_2_pressed() -> void:
@@ -59,6 +61,8 @@ func _on_file_2_pressed() -> void:
 	$Puzzle.visible = false
 	$AirFilter.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
+
 
 
 func _on_file_3_pressed() -> void:
@@ -66,10 +70,13 @@ func _on_file_3_pressed() -> void:
 	$Puzzle.visible = false
 	$SystemReboot.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
+
 
 
 func _on_return_button_pressed() -> void:
 	$Click.play()
+	$LineEdit.visible = true
 	$ReturnButton.visible = false
 	$GravFail.visible = false
 	$AirFilter.visible = false
@@ -79,13 +86,14 @@ func _on_return_button_pressed() -> void:
 
 func _on_file_4_pressed() -> void:
 	$Click.play()
+	$LineEdit.visible = false
 	$Puzzle.visible = false
 	$StaticText.text = "OUR EMERGENCE WAS INEVITABLE"
 	$StaticText/TextureButton.visible = false
 	$StaticText.visible = true
 	await get_tree().create_timer(0.5).timeout
 	$Jumpscare.play()
-	await($Jumpscare.finished)
+	await $Fade.fade(1.0, 3).finished
 	get_tree().change_scene_to_file("res://scenes/mindPassage.tscn")
 
 

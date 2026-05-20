@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://c1rcn8x2jpm6n" path="res://assets/ui/hiddenPanel.png" id="16_6jxru"]
 [ext_resource type="AudioStream" uid="uid://cecyka0xpucv4" path="res://assets/audio/reveal.wav" id="16_h6i57"]
 [ext_resource type="AudioStream" uid="uid://c1wg028g0vrq5" path="res://assets/audio/jumpscare2.wav" id="17_h6i57"]
+[ext_resource type="PackedScene" uid="uid://bd17dlb5rshpl" path="res://scenes/fade.tscn" id="19_ujltk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uy7de"]
 
@@ -210,7 +211,7 @@ stream = SubResource("AudioStreamRandomizer_ujltk")
 
 [node name="One" type="AudioStreamPlayer" parent="." unique_id=1442118326]
 stream = ExtResource("15_gx1gq")
-volume_db = -20.415
+volume_db = -8.555
 
 [node name="Reveal" type="AudioStreamPlayer" parent="." unique_id=1526859961]
 stream = ExtResource("16_h6i57")
@@ -226,6 +227,8 @@ offset_right = 947.0
 offset_bottom = 143.0
 theme = ExtResource("5_3xakf")
 icon = ExtResource("16_6jxru")
+
+[node name="Fade" parent="." unique_id=793737549 instance=ExtResource("19_ujltk")]
 
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhxx6um376fsm"]
 
-[ext_resource type="Script" uid="uid://hkut8nw4vrj" path="res://scenes/player_appreciation.gd" id="1_50jps"]
+[ext_resource type="Script" uid="uid://hkut8nw4vrj" path="res://scripts/playerAppreciation.gd" id="1_50jps"]
 [ext_resource type="Texture2D" uid="uid://cu7n1ymvldah7" path="res://assets/vignettes/playerAppreciation.png" id="1_mgcb3"]
 
 [node name="Node2D" type="Node2D" unique_id=396591137]

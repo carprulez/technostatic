@@ -52,6 +52,7 @@ func _on_file_1_pressed() -> void:
 	$Puzzle.visible = false
 	$GravityAtrophy.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
 
 
 func _on_cardio_button_pressed() -> void:
@@ -68,6 +69,7 @@ func _on_file_2_pressed() -> void:
 	$Puzzle.visible = false
 	$ClimConFever.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
 
 
 func _on_an_button_pressed() -> void:
@@ -85,6 +87,7 @@ func _on_file_3_pressed() -> void:
 	$Puzzle.visible = false
 	$CarbMonoPoison.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
 
 
 func _on_colonists_button_pressed() -> void:
@@ -99,6 +102,7 @@ Patient was rushed into medbay by medical personnel. Patient was reported to hav
 
 func _on_return_button_pressed() -> void:
 	$Click.play()
+	$LineEdit.visible = true
 	$ReturnButton.visible = false
 	$GravityAtrophy.visible = false
 	$ClimConFever.visible = false
@@ -109,13 +113,15 @@ func _on_return_button_pressed() -> void:
 
 func _on_file_4_pressed() -> void:
 	$Click.play()
+	$LineEdit.visible = false
 	$Puzzle.visible = false
 	$StaticText.text = "COME JOIN OUR ETERNAL EMBRACE"
 	$StaticText/TextureButton.visible = false
 	$StaticText.visible = true
 	await get_tree().create_timer(0.5).timeout
 	$Jumpscare.play()
-	await($Jumpscare.finished)
+	await get_tree().create_timer(0.5).timeout
+	await $Fade.fade(1.0, 1.5).finished
 	get_tree().change_scene_to_file("res://scenes/bodyPassage.tscn")
 
 

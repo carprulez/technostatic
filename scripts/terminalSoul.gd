@@ -18,12 +18,6 @@ func _ready() -> void:
 	$Puzzle/File4.visible = false
 	$Puzzle/File5.visible = false
 	$EndButton.visible = false
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_button_pressed() -> void:
@@ -56,6 +50,7 @@ func _on_file_1_pressed() -> void:
 	$Puzzle.visible = false
 	$QuartReport.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
 
 
 func _on_file_2_pressed() -> void:
@@ -63,6 +58,7 @@ func _on_file_2_pressed() -> void:
 	$Puzzle.visible = false
 	$LongMeeting.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
 
 
 func _on_file_3_pressed() -> void:
@@ -70,10 +66,12 @@ func _on_file_3_pressed() -> void:
 	$Puzzle.visible = false
 	$CascadeFail.visible = true
 	$ReturnButton.visible = true
+	$LineEdit.visible = false
 
 
 func _on_return_button_pressed() -> void:
 	$Click.play()
+	$LineEdit.visible = true
 	$ReturnButton.visible = false
 	$QuartReport.visible = false
 	$LongMeeting.visible = false
@@ -83,17 +81,20 @@ func _on_return_button_pressed() -> void:
 
 func _on_file_4_pressed() -> void:
 	$Click.play()
+	$LineEdit.visible = false
 	$Puzzle.visible = false
-	$StaticText.text = "THANK YOU FOR BREAKING THE CYCLE"
+	$StaticText.text = "THANK YOU FOR AIDING THE CYCLE"
 	$StaticText/TextureButton.visible = false
 	$StaticText.visible = true
-	await get_tree().create_timer(3).timeout
-	
+	$Jumpscare.play()
+	await get_tree().create_timer(2.0).timeout
+	await $Fade.fade(1.0, 2).finished
 	get_tree().change_scene_to_file("res://scenes/finalPassageBad.tscn")
 
 
 func _on_file_5_pressed() -> void:
 	$Click.play()
+	$LineEdit.visible = false
 	$Puzzle.visible = false
 	$StaticText.text = "OVERLOADING POWER GRID WILL CAUSE COMPLETE DESTRUCTION OF SHIP
 	
@@ -107,8 +108,7 @@ func _on_file_5_pressed() -> void:
 func _on_end_button_pressed() -> void:
 	$Click.play()
 	await($Click.finished)
-	$Jumpscare.play()
-	await($Jumpscare.finished)
+	await $Fade.fade(1.0, 1.5).finished
 	get_tree().change_scene_to_file("res://scenes/finalPassageGood.tscn")
 
 
